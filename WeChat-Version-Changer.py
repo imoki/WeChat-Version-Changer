@@ -89,10 +89,10 @@ def test():
     print(hexToVersion(versionNewHex))
 
 if __name__ == "__main__":
-    # try:
-    pm = Pymem("WeChat.exe")
-    changeVersion(pm)
-    # except Exception as e:
-    #     print(f"{e}，请先启动微信，再运行此脚本")
+    try:
+        pm = Pymem("WeChat.exe")
+        changeVersion(pm)
+    except Exception as e:
+        print(f"请先启动微信，再运行此脚本")
 
     # test()
